@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rest'Eat</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  </link>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="resteat_main">
+    <a href="index.html">
+      <header>
+        <h1>Rest'Eat</h1>
+      </header>
+    </a>
+    <div class="content">
+      <nav class="nav_resto">
+        <div class='dropright'>
+          <svg width="60" height="50">
+            <rect x="5" y="2" rx="2" ry="2" width="50" height="5"
+              style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+            <rect x="5" y="12" rx="2" ry="2" width="50" height="5"
+              style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+            <rect x="5" y="22" rx="2" ry="2" width="50" height="5"
+              style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+          </svg>
+        </div>
+        <ul class='resto_list'>
+          <li> <a href="asian_page1.html">Asiatique </a></li>
+          <li> <a href="french_restaurant.html">Français </a></li>
+          <li> <a href="fastf_restaurant.html">Fast Food </a></li>
+          <li> <a href="italian_page1.html">Italien </a></li>
+          <li> <a href="african_restaurant.html">Africain </a></li>
+          <li> <a href="university_restaurant.html">Restaurant universitaire </a></li>
+          <li><a onclick="redirigerVersPageAleatoire1()" style="cursor: pointer;">Une petite faim?</a></li>
+        </ul>
+      </nav>
+
+      <div class="center">
+        <div class='intro'>
+          <div class='intro_titre'>
+            Restaurants asiatiques
+            <img src="img/asie/bowl_noodle.png" alt=”Image” height=40px width=50px>
+          </div>
+          <div class='intro_texte'>
+            "La nourriture asiatique, c'est comme un voyage dans un pays lointain. C'est une invitation à explorer de
+            nouveaux goûts, à découvrir de nouvelles saveurs et à s'émerveiller devant la beauté des plats." - Ruth
+            Reichl
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+        <div class="main">
+          <div class="categorie">
+            <span>
+              TRIER:
+            </span>
+            <label onclick="TrieReset()" class="trie"><input type="radio" name="trier" value="Aucun" checked>Par
+              defaut</label>
+            <label onclick="trieNoteCroissant()" class="trie"><input type="radio" name="trier"
+                value="Prix croissant">Note
+              croissante</label>
+            <label onclick="trieNoteDecroissant()" class="trie" value="Prix decroissant"><input type="radio"
+                name="trier">Note
+              decroissante</label>
+          </div>
+          <div class='resto_main'>
+            <div class="list1">
+              <div class='box resto1'>
+                <a href="restaux_info/bo_bun_2_go.html">
+                  <img src="img/asie/bo_bun_2_go.jpeg" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Bo bun 2 Go <br>
+                    <div class="description">
+                      83 Rue du Château des Rentiers, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.7
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.7;"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class='box resto2'>
+                <a href="restaux_info/lao_chaleune.html">
+                  <img src="img/asie/lao_chaleune.PNG" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Lao Chaleune <br>
+                    <div class="description">
+                      29 Rue du Château des Rentiers, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.6
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.6;"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class='box resto3'>
+                <a href="restaux_info/hokkaido_8.html">
+                  <img src="img/asie/hokkaido_8.PNG" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Hokkaido 8 <br>
+                    <div class="description">
+                      38 Rue Louise Weiss, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    3.7
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 3.7;"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="list2">
+              <div class='box resto4'>
+                <a href="restaux_info/hokkaido.html">
+                  <img src="img/asie/hokkaido.jpeg" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Hokkaido <br>
+                    <div class="description">
+                      91 Rue Broca, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.1
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.1;"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class='box resto5'>
+                <a href="restaux_info/lao_viet.html">
+                  <img src="img/asie/lao_viet.jpg" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Lao Viet <br>
+                    <div class="description">
+                      24 Bd Masséna, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.5
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.5;"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class='box resto6'>
+                <a href="restaux_info/my_kim_restaurant.html">
+                  <img src="img/asie/my_kim_restaurant.PNG" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    My Kim Restaurant <br>
+                    <div class="description">
+                      40 Rue des Terres au Curé, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.7
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.7;"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div>
+            <table class="navig_page">
+              <tbody>
+                <tr>
+                  <td>
+                    <a aria-label="Page précédente" class="page prev-page" href="asian_page1.html"
+                      onclick="navig(0, 'asian')">
+                      < </a>
+                  </td>
+                  <td>
+                    <a id="lien1" aria-label="Page 1" class="page" href="asian_page1.html" onclick="navig(0, 'asian')">
+                      1
+                    </a>
+                  </td>
+                  <td>
+                    <a id="lien2" aria-label="Page 2" class="page" href="asian_page2.html" onclick="navig(1, 'asian')">
+                      2
+                    </a>
+                  </td>
+                  <td>
+                    <a id="lien3" aria-label="Page 3" class="page" href="asian_page3.html" onclick="navig(1, 'asian')">
+                      3
+                    </a>
+                  </td>
+                  <td>
+                    <a aria-label="Page suivante" class="page next-page" href="asian_page3.html"
+                      onclick="navig(1, 'asian')">
+                      > </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="notification-bar">
+              <span id='close' onclick='this.parentNode.remove(); return false;'>x</span>
+              <a href="formulaire.html">
+                <p> Participez à l'amélioration du site web en cliquant ici :)</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class='contacts'>
+            <h1> Contacts </h1>
+            <ins> <a href='CV_roude.html'> Roude Jean Marie </a></ins>
+            <br>
+            <ins> <a href='CV_meryam.html'> Meryam Boulayat </a></ins>
+          </div>
+          <p>All right reserved @ Quelqu'un</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

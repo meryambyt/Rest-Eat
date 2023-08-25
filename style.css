@@ -1,0 +1,678 @@
+/* Taille et margin des conteneurs principaux */
+body {
+    margin: 0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+/* Titre principal */
+header h1 {
+  position: relative;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -55%);
+  color: floralwhite;
+  font-size: 3cm;
+}
+
+body { /* Image de fond */
+  background-image: url("img/allfood.png");
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: repeat;
+}
+
+/* Barre de navigation */
+.nav_resto {
+  position: sticky;
+  top: 0px;
+  height: 75px;
+  border-top: 2px solid indianred;
+  box-shadow: 0px 15px 6px -15px #111; /*Effet ombre*/
+  background-color: #ffffff;
+  z-index: 1; /* Mise au premier plan */
+}
+
+/* Liste contenant les noms des catégories */
+.resto_list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Paramètres disposition des catégories */
+.resto_list li {
+  position: relative;
+  margin: 10px 20px;
+  font-size: 18px;
+  height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #333;
+}
+/* Petit animation */
+.resto_list li::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: indianred;
+  transition: width 0.3s ease-in-out;
+}
+
+.resto_list li:hover::after {
+  width: 100%;
+}
+
+/* Background fond noir transparent */
+.content {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Main content background*/
+.main {
+  background-color: white;
+  margin: 0px 2.5%;
+  padding: 50px 0;
+}
+
+/* Intro concernant la page */
+.intro {
+  background-color: white;
+  margin: 0px 2.5% 0px 2.5%;
+  padding: 10px 15px 0px 15px;
+}
+
+/* Style du titre de l'introduction */
+.intro_titre {
+  font-size: 40px;
+  padding: 10px 15px 0px 15px;
+  font-weight: 700;
+}
+
+/* Style et du sous texte de l'introduction */
+.intro_texte {
+  font-size: 0.5cm;
+  padding: 10px 15px 0px 15px;
+  text-align: justify;
+  font-family: 'Cardo', serif;
+}
+
+/* Bouton pour le trie */
+.categorie {
+  display: flex;
+  justify-content: center;
+}
+
+.categorie span {
+  padding: 30px 2px 0px 10px;
+  text-align: left;
+  font-weight: 700;
+}
+
+/* Affichage des boutons pour le trie */
+.trie {
+  display: inline-block;
+  max-width: 130px;
+  height: 30px;
+  background-color: white;
+  border: thin solid #D5D5D5;
+  border-radius: 4px;
+  color: #777777;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 22px 0px 10px;
+  text-align: left;
+}
+
+/* Style lors du passage de curseur sur le bouton */
+.trie:hover, .trie:focus {
+  cursor: pointer;
+  border-color: #d01d1d;
+  color: #1c1c1c;
+}
+
+
+/* Affichage principale */
+.resto_main{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 5px;
+}
+
+/* Affichage de la premiere liste de restos*/
+.list1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Affichage de la deuxieme liste de restos*/
+.list2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Box d'affichage du restaurant*/
+.box {
+  position: relative;
+  width: 500px;
+  height: 450px;
+  margin: 10px;
+  background-color: white;
+}
+
+/* Box d'affichage des informations 
+relatives aux restaurants*/
+.box .sous_titre{
+  position: relative;
+  display: block;
+  text-align: left;
+  font-family:  Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+  font-weight: bold;
+  width: 95%;
+  top: 10%;
+  left: 10%;
+  transform: translate(-10%, -10%);
+}
+
+/* Box d'affichage du nom du restaurant*/
+.sous_titre_back {
+  position: relative;
+  width: 100%;
+  height: 30%;
+  background-color: white;
+}
+
+/* Box d'affichage de l'adresse du restaurant*/
+.description {
+  font-family:  Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+  font-weight: lighter;
+  font-size: 3mm;
+}
+
+/*
+Note pour les restaurants
+Affichage des étoiles insipiré de : https://jsfiddle.net/7jro625e 
+*/
+.ratings {
+  position: absolute;
+  top: 60.5%;
+  right: 5px;
+  height: 28px;
+  width: 140px;
+  border: 1px solid #ffdd77;
+  border-radius: 10px 10px 10px 10px;
+  background-color: white;
+}
+
+/* Texte style concernant la note */
+.ratings .note {
+  color: black;
+  display: inline-block;
+  padding: 7.4px 0 0 6.5px;
+}
+
+/* Etoiles grises */
+.ratings .empty-stars {
+  position: absolute;
+  right: 2.5px;
+  top: 0;
+  color: #d9dbdf;
+}
+/* Etoiles jaunes selon la note */
+.ratings .full-stars {
+  --percent: calc((var(--rating) / 5 * 100%));
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: var(--percent);
+  color: #ffcc33;
+}
+
+/* Affichage des étoiles */
+.ratings .empty-stars:before, .ratings .full-stars:before {
+    content:"\2605\2605\2605\2605\2605";
+    font-size: 16pt;
+}
+
+/* Style des liens hypertexts */
+a {
+  color: black;
+  text-decoration: none; /* non sous-ligné */
+}
+
+/* Barre de navigation */
+.navig_page {
+  position: relative;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Bordure des boutons de pagination */
+td {
+  display: inline-block;
+  vertical-align: inherit;
+  border:1px solid;
+  border-color: indianred;
+  margin-right: 10px;
+}
+
+/* Style du boutons de pagination*/
+.page, .page-precedente, .page-suivante {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  padding:8px 16px;
+}
+
+/* Affichage lors de passage du curseur
+sur la pagination*/
+.page:hover {
+  text-decoration: underline;
+  background-color: indianred;
+  color: white;
+}
+
+/* Style du footer en bas de page*/
+.footer {
+  height: 100%;
+  margin: 0px 2.5% 5px 2.5%;
+  color: black;
+  background-color: #f7d1cd;
+  text-align: center;
+  
+}
+
+/* Style des titres dans le footer*/
+.footer h1 {
+  padding-top: 10px;
+  margin-top: 0;
+}
+
+/* */ 
+
+/* Formulaire */ 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0px 5% 0px 5%;
+  padding: 10px 15px 0px 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Padding selon le type d'input */
+input[type="text"], input[type="number"], textarea,
+select, input[type="range"] {
+  padding: 0.5rem;
+}
+
+/* Style bouton submit */
+input[type="submit"] {
+  background-color: rosybrown;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+/* Barre pour l'échelle de la note  */
+.note {
+  display: flex;
+  align-items: center;
+}
+
+.valeur {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* A afficher lorsque la taille de la fenêtre est réduite*/
+.dropright {
+  display: none
+}
+
+/* Affichage lorsque fenetre inferieur a 1798px*/
+@media screen and (max-width: 1798px) {
+  .main {
+    background-color: white;
+    margin: 0px 2.5%;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main_2 {
+    padding-top: 15px;
+  }
+  .main_2 .carte {
+    margin-left: 10px;
+  }
+  div.carte iframe {
+    width: 440px;
+    height: 440px;
+  }
+}
+
+/* Affichage lorsque fenetre inferieur a 1666px*/
+@media screen and (max-width: 1666px) {
+  .resto_main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 5px;
+  }
+  
+  .resto_main .box{
+    flex: 0 0 33.333334%;
+  }
+  .list1, .list2{
+    display: inline;
+  }
+}
+
+/* Affichage lorsque fenetre inferieur a 1305px*/
+@media screen and (max-width: 1305px) {
+  .resto_list li {
+    margin: 10px 11px;
+    
+  }
+}
+
+/* Affichage lorsque fenetre inferieur a 1200px*/
+@media screen and (max-width: 1200px) {
+  .resto_list li {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1180px) {
+  .resto_list li {
+    height: 20px;
+    text-align: center;
+  }
+}
+
+/* Affichage lorsque fenetre inferieur a 1115px*/
+@media screen and (max-width: 1115px) {
+  .box {
+    width: 414px;
+  }
+  div.carte iframe {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/* Affichage lorsque fenetre inferieur a 945px*/
+@media screen and (max-width: 945px) {
+  .center > * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .intro, .main {
+    width: 504px;
+  }
+  .footer {
+    width: 534px;
+    margin: auto;
+  }
+  .main { /*Même padding que intro et footer*/
+    padding: 10px 15px 0px 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .box {
+    height: 456px;
+  }
+  div.carte iframe {
+    width: 500px;
+    height: 333px;
+  }
+  
+  .dropright {
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%);
+  }
+  .content > .dropright {
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: 25px;
+    z-index: 2;
+  }
+  /* Inspiré des TPs*/
+
+  .resto_list li{
+    position: absolute;
+    top: -500px;
+    display: block;
+    margin: 0;
+    height: 24px;
+    padding: 13px 0;
+  }
+  
+  ul.resto_list {
+    width: 256px;
+    opacity: 0;
+    padding: 0;
+    margin: 0 auto;
+    flex-direction: column;
+    background-color: white;
+  }
+  
+  nav:hover ul{
+    margin-top: 75px;
+    transition: opacity 1s;
+    opacity: 1;
+  }
+  
+  nav:hover li{    
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 0px;
+    transition: top 1s;
+    border-bottom: indianred;
+    box-shadow: 0px 15px 4px -17px #111
+  }
+  
+  /* Resto */
+  .main .imgleft {
+    border-radius: 15px;
+    margin-left: 0px;
+    width: 504px;
+    height: auto; 
+  }
+  .main_2 {
+    display: flex;
+    flex-direction: row;
+    margin-right: 0px;
+  }
+  .main_2 .keyword {
+    font-size: 13px;
+  }
+  .main_2 .carte {
+    border-radius: 15px;
+    overflow: hidden;
+    margin-left: -65px;
+    margin-top: -30px;
+  }
+  .main_2 a {
+    font-size: 12px;
+  }
+  div.carte iframe {
+    width: 260px;
+    height: 260px;
+  }
+  .horaire td {
+    font-size: 11px;
+  }
+}
+
+/* Affichage lorsque fenetre inferieur a 515px*/
+@media screen and (max-width: 515px) {
+  .center > * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .intro, .main {
+    width: 403px;
+  }
+  .footer {
+    width: 443px;
+  }
+  .box {
+    height: 389px;
+  }
+  .main .imgleft {
+    border-radius: 15px;
+    margin-left: 0px;
+    width: 403px;
+    height: auto; 
+  }
+  .main_2 .carte {
+    margin-left: 0px;
+    margin-top: -20px;
+  }
+  
+  .categorie {
+    flex-direction: column;
+    align-items: center;
+  }
+  .trie { /*Button de trie taille fixée*/
+    min-width: 130px;
+  }
+  
+  .dropright {
+    display:center;
+  }
+}
+
+/* */
+.ntel {
+  color: #7d9fd3;
+}
+
+/* Affichage des horaires des restaurants */
+.horaire {
+  display: inline-block;
+}
+
+.horaire td {
+  display: revert;
+  border: none;
+  padding-top: 5px;
+}
+
+.horaire tr {
+  padding-left: 5px;
+}
+
+/* Affichage des informations sur un restaurant */
+.main_2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10.5%;
+  margin-right: 32px;
+}
+
+/* Style de l'image du restaurant */
+.main .imgleft {
+  float: left;
+  border-radius: 15px;
+  
+}
+
+/* Informations relatives au restaurant */
+.main_2 .keyword {
+  display: inline-block;
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+  padding-top: 15px;
+}
+
+/* Carte Google maps */
+.main_2 .carte {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Bar de notification */
+.notification-bar {
+  position: fixed;
+  bottom: 20px;
+  right: -110px;
+  width: 300px;
+  background-color: rosybrown;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: translateX(-50%);
+  transition: right 0.5s ease-in-out;
+  z-index: 9999;
+  text-align: justify;
+}
+
+/* Bouton pour fermer la barre de notification */
+#close {
+  cursor: pointer;
+  float: right;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: -5px;
+  margin-right: -5px;
+}
+
+/* */
+#close:hover {
+  color: #fff;
+}
+
+.notification-bar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.notification-bar a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rest'Eat</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="resteat_main">
+    <a href="index.html">
+      <header>
+        <h1>Rest'Eat</h1>
+      </header>
+    </a>
+    <div class="content">
+      <nav class="nav_resto">
+        <div class='dropright'>
+          <svg width="60" height="50">
+            <rect x="5" y="2" rx="2" ry="2" width="50" height="5"
+              style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+            <rect x="5" y="12" rx="2" ry="2" width="50" height="5"
+              style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+            <rect x="5" y="22" rx="2" ry="2" width="50" height="5"
+              style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+          </svg>
+        </div>
+        <ul class='resto_list'>
+          <li> <a href="asian_page1.html">Asiatique </a></li>
+          <li> <a href="french_restaurant.html">Français </a></li>
+          <li> <a href="fastf_restaurant.html">Fast Food </a></li>
+          <li> <a href="italian_page1.html">Italien </a></li>
+          <li> <a href="african_restaurant.html">Africain </a></li>
+          <li> <a href="university_restaurant.html">Restaurant universitaire </a></li>
+          <li><a onclick="redirigerVersPageAleatoire1()" style="cursor: pointer;">Une petite faim?</a></li>
+        </ul>
+      </nav>
+
+      <div class="center">
+        <div class='intro'>
+          <div class='intro_titre'>
+            Restaurants africains
+          </div>
+          <div class='intro_texte'>
+            "La nourriture en Afrique est souvent bien plus qu'un simple repas. C'est une expression de la culture, de
+            l'identité et de l'histoire d'un peuple." - Marcus Samuelsson
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+        <div class="main">
+          <div class="categorie">
+            <span>
+              TRIER:
+            </span>
+            <label onclick="TrieReset()" class="trie"><input type="radio" name="trier" value="Aucun" checked>Par
+              defaut</label>
+            <label onclick="trieNoteCroissant()" class="trie"><input type="radio" name="trier"
+                value="Prix croissant">Note
+              croissante</label>
+            <label onclick="trieNoteDecroissant()" class="trie" value="Prix decroissant"><input type="radio"
+                name="trier">Note
+              decroissante</label>
+          </div>
+          <div class='resto_main'>
+            <div class="list1">
+              <div class='box resto1'>
+                <a href="restaux_info/afrik_n_fusion.html">
+                  <img src="img/afrique/afrik_n_fusion.jpg" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Afrik N Fusion <br>
+                    <div class="description">
+                      54 Rue Jeanne d'Arc, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    3.8
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 3.8;"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class='box resto2'>
+                <a href="restaux_info/le_soixante_douze.html">
+                  <img src="img/afrique/le_soixante_douze.PNG" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Le soixante Douze <br>
+                    <div class="description">
+                      72 Rue du Chevaleret, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.1
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.1;"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class='box resto3'>
+                <a href="restaux_info/les_marmites_du_soleil.html">
+                  <img src="img/afrique/les_marmites_du_soleil2.jpg" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Les marmites du soleil <br>
+                    <div class="description">
+                      103-105 Rue de Tolbiac, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.7
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.7;"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="list2">
+              <div class='box resto4'>
+                <a href="restaux_info/kenzy.html">
+                  <img src="img/afrique/kenzy.png" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Kenzy <br>
+                    <div class="description">
+                      15 Rue Jeanne Chauvin, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.6
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.6;"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class='box resto5'>
+                <a href="restaux_info/osoleil.html">
+                  <img src="img/afrique/osoleil.png" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    O 'soleil <br>
+                    <div class="description">
+                      21 Rue de Patay, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.7
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.7;"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class='box resto6'>
+                <a href="restaux_info/thelock.html">
+                  <img src="img/afrique/thelock.png" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    The LOCK <br>
+                    <div class="description">
+                      49 Rue de Tolbiac, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.7
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.7;"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="notification-bar">
+            <span id='close' onclick='this.parentNode.remove(); return false;'>x</span>
+            <a href="formulaire.html">
+              <p> Participez à l'amélioration du site web en cliquant ici :)</p>
+            </a>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class='contacts'>
+            <h1> Contacts </h1>
+            <ins> <a href='CV_roude.html'> Roude Jean Marie </a></ins>
+            <br>
+            <ins> <a href='CV_meryam.html'> Meryam Boulayat </a></ins>
+          </div>
+          <p>All right reserved @ Quelqu'un</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

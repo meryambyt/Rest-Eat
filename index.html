@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rest'Eat</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="resteat_main">
+    <a href="index.html">
+      <header>
+        <h1>Rest'Eat</h1>
+      </header>
+    </a>
+    <div class="content">
+      <nav class="nav_resto">
+        <div class='dropright'>
+          <svg width="60" height="50">
+            <rect x="5" y="2" rx="2" ry="2" width="50" height="5"
+              style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+            <rect x="5" y="12" rx="2" ry="2" width="50" height="5"
+              style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+            <rect x="5" y="22" rx="2" ry="2" width="50" height="5"
+              style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+          </svg>
+        </div>
+        <ul class='resto_list'>
+          <li> <a href="asian_page1.html">Asiatique </a></li>
+          <li> <a href="french_restaurant.html">Français </a></li>
+          <li> <a href="fastf_restaurant.html">Fast Food </a></li>
+          <li> <a href="italian_page1.html">Italien </a></li>
+          <li> <a href="african_restaurant.html">Africain </a></li>
+          <li> <a href="university_restaurant.html">Restaurant universitaire </a></li>
+          <li><a onclick="redirigerVersPageAleatoire1()" style="cursor: pointer;">Une petite faim?</a></li>
+        </ul>
+      </nav>
+      <div class="center">
+        <div class='intro'>
+          <div class='intro_titre'>
+            Rest'Eat: Tous les restos à proximité du campus des Grands Moulins de l'université de Paris Cité
+          </div>
+          <div class='intro_texte'>
+            Bienvenue sur notre site dédié aux restaurants à proximité de l'université !<br>
+            Si vous êtes étudiant ou membre
+            du personnel de l'université, vous savez à quel point il peut être difficile de trouver un lieu de
+            restauration qui répond à vos grosses ou petites faims. C'est pourquoi nous avons créé cette plateforme pour
+            vous aider à
+            découvrir les restaurants du quartier. Que vous cherchiez un endroit rapide pour emporter un repas
+            entre deux cours ou un lieu confortable pour déguster une cuisine de qualité, nous avons des suggestions
+            pour
+            tous les goûts et tous les budgets. Nous avons sélectionné pour vous les restaurants les plus
+            populaires auprès des étudiants et du personnel de l'université, et nous avons rassemblé toutes les
+            informations nécessaires pour vous aider à choisir le restaurant qui correspond le mieux à vos attentes.
+            <br>
+            <br>
+            Si vous ne savez pas quoi manger, faites nous confiance et cliquez sur "Une Petite Faim" (un restaurant sera
+            tiré aléatoirement dans notre base de données) !
+            <br>
+            <br>
+          </div>
+        </div>
+        <div class="main">
+          <div class="categorie">
+            <span>
+              TRIER:
+            </span>
+            <label onclick="TrieReset()" class="trie"><input type="radio" name="trier" value="Aucun" checked>Par
+              defaut</label>
+            <label onclick="trieNoteCroissant()" class="trie"><input type="radio" name="trier"
+                value="Prix croissant">Note
+              croissante</label>
+            <label onclick="trieNoteDecroissant()" class="trie" value="Prix decroissant"><input type="radio"
+                name="trier">Note
+              decroissante</label>
+          </div>
+          <div class='resto_main'>
+            <div class="list1">
+              <div class='box'>
+                <a href="restaux_info/under-the-sea-ephemera.html">
+                  <img src="img/under-the-sea-ephemera.jpg" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Ephemera Restaurant <br>
+                    <div class="description">
+                      160 Av. de France, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.6
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.6;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class='box resto2'>
+                <a href="restaux_info/la_felicita.html">
+                  <img src="img/italien/la_felicita.jpg" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    La Felicità <br>
+                    <div class="description">
+                      5 Parv. Alan Turing, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.4
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.4;"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class='box resto3'>
+                <a href="restaux_info/barge_crous.html">
+                  <img src="img/universitaire/barge_crous.jpg" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    La Barge du CROUS de Paris <br>
+                    <div class="description">
+                      Quai François Mauriac, Port de la Gare, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.4
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.4;"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="list2">
+              <div class='box resto4'>
+                <a href="restaux_info/ichi.html">
+                  <img src="img/asie/ichi.jpg" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Sushi ichi <br>
+                    <div class="description">
+                      1 Rue du Moulinet, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+                <div class="ratings">
+                  <span class="note">
+                    4.6
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.6;"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class='box resto5'>
+                <a href="restaux_info/aupa.html">
+                  <img src="img/francais/aupa.jpeg" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Aupa Caminito - Burger croissant <br>
+                    <div class="description">
+                      48-50 Rue du Dessous des Berges Angle, 31 Rue Cantagrel, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.5
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.5;"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class='box resto6'>
+                <a href="restaux_info/petitsaladier.html">
+                  <img src="img/petitsaladier.png" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Le P'tit Saladier <br>
+                    <div class="description">
+                      48-50 Rue du Dessous des Berges Angle, 31 Rue Cantagrel, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.9
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.9;"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="notification-bar">
+            <span id='close' onclick='this.parentNode.remove(); return false;'>x</span>
+            <a href="formulaire.html">
+              <p> Participez à l'amélioration du site web en cliquant ici :)</p>
+            </a>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class='contacts'>
+            <h1> Contacts </h1>
+            <ins> <a href='CV_roude.html'>Roude Jean Marie : Curriculum Vitae</a></ins>
+            <br>
+            <ins> <a href='CV_meryam.html'>Meryam Boulayat : Curriculum Vitae</a></ins>
+          </div>
+          <p>All right reserved @ Quelqu'un</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

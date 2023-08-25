@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rest'Eat</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="resteat_main">
+    <a href="index.html">
+      <header>
+        <h1>Rest'Eat</h1>
+      </header>
+    </a>
+    <div class="content">
+
+      <nav class="nav_resto">
+        <div class='dropright'>
+          <svg width="60" height="50">
+            <rect x="5" y="2" rx="2" ry="2" width="50" height="5"
+              style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+            <rect x="5" y="12" rx="2" ry="2" width="50" height="5"
+              style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+            <rect x="5" y="22" rx="2" ry="2" width="50" height="5"
+              style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+          </svg>
+        </div>
+        <ul class='resto_list'>
+          <li> <a href="asian_page1.html">Asiatique </a></li>
+          <li> <a href="french_restaurant.html">Français </a></li>
+          <li> <a href="fastf_restaurant.html">Fast Food </a></li>
+          <li> <a href="italian_page1.html">Italien </a></li>
+          <li> <a href="african_restaurant.html">Africain </a></li>
+          <li> <a href="university_restaurant.html">Restaurant universitaire </a></li>
+          <li><a onclick="redirigerVersPageAleatoire1()" style="cursor: pointer;">Une petite faim?</a></li>
+        </ul>
+      </nav>
+
+      <div class="center">
+        <div class='intro'>
+          <div class='intro_titre'>
+            Fast food
+            <img src="img/fastfood/burger.png" alt=”Image” height=40px width=50px>
+          </div>
+          <div class='intro_texte'>
+            "Le fast food est comme une loterie alimentaire, où vous pouvez gagner un repas délicieux ou une
+            indigestion." - Adam Drewnowski
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+        <div class="main">
+          <div class="categorie">
+            <span>
+              TRIER:
+            </span>
+            <label onclick="TrieReset()" class="trie"><input type="radio" name="trier" value="Aucun" checked>Par
+              defaut</label>
+            <label onclick="trieNoteCroissant()" class="trie"><input type="radio" name="trier"
+                value="Prix croissant">Note
+              croissante</label>
+            <label onclick="trieNoteDecroissant()" class="trie" value="Prix decroissant"><input type="radio"
+                name="trier">Note
+              decroissante</label>
+          </div>
+          <div class='resto_main'>
+            <div class="list1">
+              <div class='box resto1'>
+                <a href="restaux_info/burger_king.html">
+                  <img src="img/fastfood/burger_king.jpg" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Burger King <br>
+                    <div class="description">
+                      <br>
+                      79-81 Quai de la Gare, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.5
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.5;"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class='box resto2'>
+                <a href="restaux_info/mcdonalds.html">
+                  <img src="img/fastfood/mcdonalds.jpg" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    McDonald's <br>
+                    <div class="description">
+                      <br>
+                      Av. de Choisy 9-11
+                    </div>
+                  </span>
+                </div>
+                <div class="ratings">
+                  <span class="note">
+                    3.3
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 3.3;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class='box resto3'>
+                <a href="restaux_info/papita.html">
+                  <img src="img/fastfood/papita.jpg" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Papita <br>
+                    <div class="description">
+                      <br>
+                      8 Rue Elsa Morante, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+                <div class="ratings">
+                  <span class="note">
+                    3.5
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 3.5;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="list2">
+              <div class='box resto4'>
+                <a href="restaux_info/season_square.html">
+                  <img src="img/fastfood/season_square.jpg" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Season Square
+                    <div class="description">
+                      <br>
+                      3 Rue Louise Weiss, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+                <div class="ratings">
+                  <span class="note">
+                    4.7
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.7;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class='box resto5'>
+                <a href="restaux_info/croq_de_bibliotheque.html">
+                  <img src="img/fastfood/croq_de_bibliotheque.JPG" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Croq de Bibliothèque
+                    <div class="description">
+                      <br>
+                      16 Rue de Tolbiac, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+                <div class="ratings">
+                  <span class="note">
+                    3.7
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 3.7;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class='box resto6'>
+                <a href="restaux_info/odelices.html">
+                  <img src="img/fastfood/odelices.png" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    O'délices
+                    <div class="description">
+                      <br>
+                      32 Rue Regnault, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+                <div class="ratings">
+                  <span class="note">
+                    3.7
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 3.7;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="notification-bar">
+            <span id='close' onclick='this.parentNode.remove(); return false;'>x</span>
+            <a href="formulaire.html">
+              <p> Participez à l'amélioration du site web en cliquant ici :)</p>
+            </a>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class='contacts'>
+            <h1> Contacts </h1>
+            <ins> <a href='CV_roude.html'> Roude Jean Marie </a></ins>
+            <br>
+            <ins> <a href='CV_meryam.html'> Meryam Boulayat </a></ins>
+          </div>
+          <p>All right reserved @ Quelqu'un</p>
+        </footer>
+      </div>
+    </div>
+</body>
+
+</html>

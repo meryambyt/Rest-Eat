@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rest'Eat</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="resteat_main">
+    <a href="index.html">
+      <header>
+        <h1>Rest'Eat</h1>
+      </header>
+    </a>
+    <div class="content">
+      <div class='dropright'>
+        <svg width="60" height="50">
+          <rect x="5" y="2" rx="2" ry="2" width="50" height="5"
+            style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+          <rect x="5" y="12" rx="2" ry="2" width="50" height="5"
+            style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+          <rect x="5" y="22" rx="2" ry="2" width="50" height="5"
+            style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+        </svg>
+      </div>
+
+      <nav class="nav_resto">
+        <ul class='resto_list'>
+          <li> <a href="asian_page1.html">Asiatique </a></li>
+          <li> <a href="french_restaurant.html">Français </a></li>
+          <li> <a href="fastf_restaurant.html">Fast Food </a></li>
+          <li> <a href="italian_page1.html">Italien </a></li>
+          <li> <a href="indian_restaurant.html">Indien </a></li>
+          <li> <a href="university_restaurant.html">Restaurant universitaire </a></li>
+          <li> <a href="random_restaurant.html">Une petite faim ? </a></li>
+        </ul>
+      </nav>
+      <div class="center">
+
+        <div class="notification-bar">
+          <span id='close' onclick='this.parentNode.remove(); return false;'>x</span>
+          <a href="formulaire.html">
+            <p> Participez à l'amélioration du site web en cliquant ici :)</p>
+          </a>
+        </div>
+        <div class="main">
+          <div class='intro'>
+            <div class='intro_titre'>
+              Votre avis compte
+            </div>
+            <div class='intro_texte'>
+              Nous voulons rendre notre site web meilleur pour vous. Votre aide et votre honnêteté sont donc
+              essentiels. Pour cela, nous vous prions de prendre quelques minutes pour remplir le formulaire suivant en
+              toute sincérité. Votre opinion nous aidera à mieux comprendre vos besoins et attentes, et ainsi vous
+              offrir des services qui vous correspondent. Merci d'avance pour votre contribution !
+              <br>
+            </div>
+          </div>
+
+          <form>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="age">Âge :</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="sexe">Sexe :</label>
+            <select id="sexe" name="sexe" required>
+              <option value="">--Choisissez--</option>
+              <option value="homme">Homme</option>
+              <option value="femme">Femme</option>
+              <option value="autre">Autre</option>
+            </select>
+
+            <label for="interface">Que pensez-vous de l'interface du site ?</label>
+            <textarea id="interface" name="interface" rows="4" cols="50" required></textarea>
+
+            <label for="attentes">Ce site repond à vos attentes ?</label>
+            <div class="attentes_items">
+              <input type="radio" id="oui" name="attentes" value="oui" required>
+              <label for="oui">Oui</label>
+              <input type="radio" id="non" name="attentes" value="non" required>
+              <label for="non">Non</label>
+            </div>
+
+            <label for="design">Notez le design du site sur une échelle de 1 à 10 :</label>
+            <div class=note>
+              <div class="valeur">0</div>
+              <input type="range" id="design" name="design" min="1" max="10" required>
+              <div class="valeur">10</div>
+            </div>
+
+            <label for="prise_en_main">Comment jugez-vous la prise en main du site ?</label>
+            <div class="prise_en_main_items">
+              <input type="radio" id="facile" name="prise_en_main" value="facile" required>
+              <label for="facile">Facile</label>
+              <input type="radio" id="moyen" name="prise_en_main" value="moyen" required>
+              <label for="moyen">Moyen</label>
+              <input type="radio" id="difficile" name="prise_en_main" value="difficile" required>
+              <label for="difficile">Difficile</label>
+            </div>
+
+            <label for="interface">Quelles sont les améliorations à apporter au site ?</label>
+            <textarea id="interface" name="interface" rows="4" cols="50" required></textarea>
+
+            <input type="submit" value="Envoyer">
+          </form>
+          <br>
+          <br>
+
+        </div>
+        <footer class="footer">
+          <div class='contacts'>
+            <h1> Contacts </h1>
+            <ins> <a href='CV_roude.html'> Roude Jean Marie </a></ins>
+            <br>
+            <ins> <a href='CV_meryam.html'> Meryam Boulayat </a></ins>
+          </div>
+          <p>All right reserved @ Quelqu'un</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

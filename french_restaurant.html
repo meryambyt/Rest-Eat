@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rest'Eat</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="resteat_main">
+    <a href="index.html">
+      <header>
+        <h1>Rest'Eat</h1>
+      </header>
+    </a>
+    <div class="content">
+
+      <nav class="nav_resto">
+        <div class='dropright'>
+          <svg width="60" height="50">
+            <rect x="5" y="2" rx="2" ry="2" width="50" height="5"
+              style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+            <rect x="5" y="12" rx="2" ry="2" width="50" height="5"
+              style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+            <rect x="5" y="22" rx="2" ry="2" width="50" height="5"
+              style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+          </svg>
+        </div>
+        <ul class='resto_list'>
+          <li> <a href="asian_page1.html">Asiatique </a></li>
+          <li> <a href="french_restaurant.html">Français </a></li>
+          <li> <a href="fastf_restaurant.html">Fast Food </a></li>
+          <li> <a href="italian_page1.html">Italien </a></li>
+          <li> <a href="african_restaurant.html">Africain </a></li>
+          <li> <a href="university_restaurant.html">Restaurant universitaire </a></li>
+          <li><a onclick="redirigerVersPageAleatoire1()" style="cursor: pointer;">Une petite faim?</a></li>
+        </ul>
+      </nav>
+
+      <div class="center">
+        <div class='intro'>
+          <div class='intro_titre'>
+            Restaurants français
+            <img src="img/francais/frenchflag.jpg" alt=”Image” height=35px width=35px>
+          </div>
+          <div class='intro_texte'>
+            "La cuisine française est une cuisine de l'équilibre, de la mesure et de la simplicité." - Paul Bocuse
+          </div>
+        </div>
+        <div class="main">
+          <div class="categorie">
+            <span>
+              TRIER:
+            </span>
+            <label onclick="TrieReset()" class="trie"><input type="radio" name="trier" value="Aucun" checked>Par
+              defaut</label>
+            <label onclick="trieNoteCroissant()" class="trie"><input type="radio" name="trier"
+                value="Prix croissant">Note
+              croissante</label>
+            <label onclick="trieNoteDecroissant()" class="trie" value="Prix decroissant"><input type="radio"
+                name="trier">Note
+              decroissante</label>
+          </div>
+          <div class='resto_main'>
+            <div class="list1">
+              <div class='box resto1'>
+                <a href="restaux_info/les_1001_nuits.html">
+                  <img src="img/francais/les_1001_nuits.jpg" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Les 1001 Nuits <br>
+                    <div class="description">
+                      41 Quai Panhard et Levassor, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.1
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.1;"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class='box resto2'>
+                <a href="restaux_info/dupont_cafe.html">
+                  <img src="img/francais/dupont_cafe.PNG" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Dupont Cafe <br>
+                    <div class="description">
+                      84 Av. de France, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    3.5
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 3.5;"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class='box resto3'>
+                <a href="restaux_info/milord.html">
+                  <img src="img/francais/milord.PNG" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Milord <br>
+                    <div class="description">
+                      12 Rue de Tolbiac, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.8
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.8;"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="list2">
+              <div class='box resto4'>
+                <a href="restaux_info/nosso.html">
+                  <img src="img/francais/nosso.jpg" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Nosso <br>
+                    <div class="description">
+                      22 Prom. Claude Lévi-Strauss, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.6
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.6;"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class='box resto5'>
+                <a href="restaux_info/n_plus_1.html">
+                  <img src="img/francais/n_plus_1.PNG" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    N+1 <br>
+                    <div class="description">
+                      151 Rue du Chevaleret, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.8
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.8;"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class='box resto6'>
+                <a href="restaux_info/chez_trassoudaine.html">
+                  <img src="img/francais/chez_trassoudaine.jpg" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Chez Trassoudaine <br>
+                    <div class="description">
+                      3 Place nationale, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+
+                <div class="ratings">
+                  <span class="note">
+                    4.7
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.7;"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <table class="navig_page">
+
+          </table>
+          <div class="notification-bar">
+            <span id='close' onclick='this.parentNode.remove(); return false;'>x</span>
+            <a href="formulaire.html">
+              <p> Participez à l'amélioration du site web en cliquant ici :)</p>
+            </a>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class='contacts'>
+            <h1> Contacts </h1>
+            <ins> <a href='CV_roude.html'> Roude Jean Marie </a></ins>
+            <br>
+            <ins> <a href='CV_meryam.html'> Meryam Boulayat </a></ins>
+          </div>
+          <p>All right reserved @ Quelqu'un</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

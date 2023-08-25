@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rest'Eat</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="resteat_main">
+    <a href="index.html">
+      <header>
+        <h1>Rest'Eat</h1>
+      </header>
+    </a>
+    <div class="content">
+      
+      <nav class="nav_resto">
+        <div class='dropright'>
+          <svg width="60" height="50">
+            <rect x="5" y="2" rx="2" ry="2" width="50" height="5"
+              style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+            <rect x="5" y="12" rx="2" ry="2" width="50" height="5"
+              style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+            <rect x="5" y="22" rx="2" ry="2" width="50" height="5"
+              style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+          </svg>
+        </div>
+        <ul class='resto_list'>
+          <li> <a href="asian_page1.html">Asiatique </a></li>
+          <li> <a href="french_restaurant.html">Français </a></li>
+          <li> <a href="fastf_restaurant.html">Fast Food </a></li>
+          <li> <a href="italian_page1.html">Italien </a></li>
+          <li> <a href="african_restaurant.html">Africain </a></li>
+          <li> <a href="university_restaurant.html">Restaurant universitaire </a></li>
+          <li><a onclick="redirigerVersPageAleatoire1()" style="cursor: pointer;">Une petite faim?</a></li>
+        </ul>
+      </nav>
+
+      <div class="center">
+        <div class='intro'>
+          <div class='intro_titre'>
+            Restaurants italiens
+            <img src="img/italian_flag.png" alt=”Image” height=35px width=35px>
+          </div>
+          <div class='intro_texte'>
+            "E la pasta al dente, la pizza margherita, il caffè espresso... sono solo alcune delle innumerevoli delizie
+            che la cucina italiana può offrire." - Carlo Petrini
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+        <div class="main">
+          <div class="categorie">
+            <span>
+              TRIER:
+            </span>
+            <label onclick="TrieReset()" class="trie"><input type="radio" name="trier" value="Aucun" checked>Par
+              defaut</label>
+            <label onclick="trieNoteCroissant()" class="trie"><input type="radio" name="trier"
+                value="Prix croissant">Note
+              croissante</label>
+            <label onclick="trieNoteDecroissant()" class="trie" value="Prix decroissant"><input type="radio"
+                name="trier">Note
+              decroissante</label>
+          </div>
+          <div class='resto_main'>
+            <div class="list1">
+              <div class='box resto1'>
+                <a href="restaux_info/chez_gino.html">
+                  <img src="img/italien/chez_gino.png" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Chez Gino - Pizza au Feu de Bois <br>
+                    <div class="description">
+                      80 Rue Dunois, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+                <div class="ratings">
+                  <span class="note">
+                    4.2
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.2;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class='box resto2'>
+                <a href="restaux_info/delfino.html">
+                  <img src="img/italien/delfino.png" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Delfino <br>
+                    <div class="description">
+                      <br>
+                      1 Rue de Campo-Formio, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+                <div class="ratings">
+                  <span class="note">
+                    4.2
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.2;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class='box resto3'>
+                <a href="restaux_info/terasse_italie.html">
+                  <img src="img/italien/terrasse_italie.png" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    La Terrasse d'Italie <br>
+                    <div class="description">
+                      <br>
+                      21 Av. d'Italie, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+                <div class="ratings">
+                  <span class="note">
+                    4.0
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.0;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="list2">
+              <div class='box resto4'>
+                <a href="restaux_info/venezia.html">
+                  <img src="img/italien/venezia.png" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Venezia Pizzéria
+                    <div class="description">
+                      <br>
+                      66 bis Rue Albert, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+                <div class="ratings">
+                  <span class="note">
+                    4.0
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.0;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class='box resto5'>
+                <a href="restaux_info/verdi.html">
+                  <img src="img/italien/verdi.png" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Verdi
+                    <div class="description">
+                      <br>
+                      4 Pl. des Alpes, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+                <div class="ratings">
+                  <span class="note">
+                    4.2
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.2;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class='box resto6'>
+                <a href="restaux_info/scalini.html">
+                  <img src="img/italien/scalini.png" alt=”Image” height=70% width=100%>
+                </a>
+                <div class="sous_titre_back">
+                  <span class="sous_titre">
+                    Scalini
+                    <div class="description">
+                      <br>
+                      17 Rue Abel Gance, 75013 Paris
+                    </div>
+                  </span>
+                </div>
+                <div class="ratings">
+                  <span class="note">
+                    4.1
+                  </span>
+                  <div class="empty-stars">
+                    <div class="full-stars" style="--rating: 4.1;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <table class="navig_page">
+              <tbody>
+                <tr>
+                  <td>
+                    <a aria-label="Page précédente" class="page prev-page" href="italian_page1.html"
+                      onclick="navig(0, 'italian')">
+                      < </a>
+                  </td>
+                  <td>
+                    <a id="lien1" aria-label="Page 1" class="page" href="italian_page1.html"
+                      onclick="navig(0, 'italian')">
+                      1
+                    </a>
+                  </td>
+                  <td>
+                    <a id="lien2" aria-label="Page 2" class="page" href="italian_page2.html"
+                      onclick="navig(1, 'italian')">
+                      2
+                    </a>
+                  </td>
+                  <td>
+                    <a aria-label="Page suivante" class="page next-page" href="italian_page2.html"
+                      onclick="navig(1, 'italian')">
+                      > </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="notification-bar">
+              <span id='close' onclick='this.parentNode.remove(); return false;'>x</span>
+              <a href="formulaire.html">
+                <p> Participez à l'amélioration du site web en cliquant ici :)</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class='contacts'>
+            <h1> Contacts </h1>
+            <ins> <a href='CV_roude.html'> Roude Jean Marie </a></ins>
+            <br>
+            <ins> <a href='CV_meryam.html'> Meryam Boulayat </a></ins>
+          </div>
+          <p>All right reserved @ Quelqu'un</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
