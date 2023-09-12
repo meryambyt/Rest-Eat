@@ -1,7 +1,7 @@
 # Rest-Eat
 
 ### Auteurs
-Meryam BOULAYAT  
+![Meryam BOULAYAT](https://github.com/meryambyt)  
 Roude JEAN MARIE  
 
 ### À propos
