@@ -1,6 +1,6 @@
 # Rest-Eat  
 
-Site répertoriant quelques restaurants (hors-ligne)  
+Site (hors-ligne) répertoriant quelques restaurants proche de l'Université Paris Cité.
 
 ---
 
