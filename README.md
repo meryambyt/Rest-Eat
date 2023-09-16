@@ -1,4 +1,4 @@
-# Rest-Eat
+# Rest-Eat  
 
 Site répertoriant quelques restaurants (hors-ligne)  
 ---
