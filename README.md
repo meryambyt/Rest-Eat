@@ -5,8 +5,7 @@ Site (hors-ligne) répertoriant quelques restaurants proche de l'Université Par
 ---
 
 ### Auteurs
-Meryam BOULAYAT
-![Roude JEAN MARIE](https://github.com/Trysis)  
+Meryam BOULAYAT et [Roude JEAN MARIE](https://github.com/Trysis)  
 
 ---
 
